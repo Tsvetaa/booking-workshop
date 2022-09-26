@@ -1,0 +1,16 @@
+:root {
+    --primary-color: 220;
+    --primary-s: 50%;
+    --primary-l: 75%;
+
+    --secondary-color: 240;
+    --secondary-s: 40%;
+    --secondary-l: 55%;
+
+    --action-color: 300;
+    --action-s: 40%;
+    --action-l: 55%;
+
+    --round: 0;
+    --shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.2);
+}
