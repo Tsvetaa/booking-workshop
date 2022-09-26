@@ -17,7 +17,7 @@ app.set('view engine', 'hbs');
 app.use(express.urlencoded({extended: true}));
 app.use('/static', express.static('static'));
 
-app.use(defaultTitle('Accommodation Reservation'));
+app.use(defaultTitle(''));
 
 app.use(homeController);
 app.use('/catalog', catalogController);

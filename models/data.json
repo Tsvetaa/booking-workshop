@@ -1,10 +1,38 @@
 [
-    {
-        "id": "1234",
-        "name": "Cozy Room",
-        "description": "Nice and cozy",
-        "city": "Amsterdam",
-        "beds": 2,
-        "price": 130
-    }
+  {
+    "id": "1234",
+    "name": "Cozy Room",
+    "description": "Nice and cozy",
+    "city": "Amsterdam",
+    "beds": 2,
+    "price": 130,
+    "imgUrl": "/static/assets/ams-room.jpg"
+  },
+  {
+    "id": "0c5b09",
+    "name": "Big Room",
+    "description": "Clean and spacious room",
+    "city": "Brussels",
+    "beds": 1,
+    "price": 100,
+    "imgUrl": "/static/assets/bxl-room.jpg"
+  },
+  {
+    "id": "0e4ab5",
+    "name": "1",
+    "description": "1",
+    "city": "1",
+    "beds": 1,
+    "price": 1,
+    "imgUrl": "1"
+  },
+  {
+    "id": "047cf1",
+    "name": "Hotel Room",
+    "description": "description",
+    "city": "Sofia",
+    "beds": 1,
+    "price": 50,
+    "imgUrl": "/"
+  }
 ]
