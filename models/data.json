@@ -16,23 +16,6 @@
     "beds": 1,
     "price": 100,
     "imgUrl": "/static/assets/bxl-room.jpg"
-  },
-  {
-    "id": "0e4ab5",
-    "name": "1",
-    "description": "1",
-    "city": "1",
-    "beds": 1,
-    "price": 1,
-    "imgUrl": "1"
-  },
-  {
-    "id": "047cf1",
-    "name": "Hotel Room",
-    "description": "description",
-    "city": "Sofia",
-    "beds": 1,
-    "price": 50,
-    "imgUrl": "/"
   }
+
 ]

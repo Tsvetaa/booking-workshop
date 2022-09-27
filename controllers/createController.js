@@ -1,4 +1,4 @@
-const { create } = require('../services/accomodationServices');
+const {create} = require('../services/accommodationServices')
 
 const router = require('express').Router();
 
