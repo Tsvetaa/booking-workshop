@@ -23,7 +23,7 @@ async function register(username, password) {
 
 
 async function login(username, password) {
-    const user = await User.findOne({ username: { $regex: new RegExp(username), $options: 'i' } });
+    const user = await User.findOne({ username }).collation({ localae: 'en', strength: 2});
     if(!user) {
         throw new Error('Incorrect username or password');
     }
@@ -34,6 +34,7 @@ async function login(username, password) {
     }
 
     return {
+        _id: user._id,
         username: user.username, 
         roles: user.roles
     };

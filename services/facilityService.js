@@ -20,8 +20,7 @@ async function addFacilities(roomId, facilityIds) {
     console.log('To remove', toRemove.map(x => x.label));
     toRemove.forEach(f => {
         // remove room from facility
-        console.log(f.rooms.findIndex(rId => rId.toString() == roomId));
-        f.rooms.splice(f.rooms.findIndex(rId => rId.toString() == roomId), 1)
+        f.rooms.splice(f.rooms.findIndex(rId => rId.toString() == roomId), 1);
         // remove facility from room
         room.facilities.splice(room.facilities.findIndex(x => x._id.toString() == f._id.toString()), 1)
     });
