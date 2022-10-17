@@ -1,8 +1,9 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
+
 async function register(username, password) {
-    const existing = await User.findOne({ username: { $regex: new RegExp(username), $options: 'i' } });
+    const existing = await User.findOne({ username });
     if (existing) {
         throw new Error('Username is taken');
     }
@@ -23,7 +24,7 @@ async function register(username, password) {
 
 
 async function login(username, password) {
-    const user = await User.findOne({ username }).collation({ localae: 'en', strength: 2});
+    const user = await User.findOne({ username }).collation({ locale: 'en', strength: 2});
     if(!user) {
         throw new Error('Incorrect username or password');
     }
