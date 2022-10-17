@@ -30,7 +30,13 @@ async function create(roomData, ownerId) {
 }
 
 async function update(roomId, roomData) {
+    const missing = Object.entries(roomData).filter(([k, v]) => !v);
+    if (missing.length > 0) {
+        throw new Error(missing.map(m => `${m[0]} is required!`).join('\n'));
+    }
+
     const room = await Room.findById(roomId);
+    console.log(room);
 
     room.name = roomData.name;
     room.description = roomData.description;
@@ -39,10 +45,7 @@ async function update(roomId, roomData) {
     room.price = Number(roomData.price);
     room.imgUrl = roomData.imgUrl;
 
-    const missing = Object.entries(room).filter(([k, v]) => !v);
-    if (missing.length > 0) {
-        throw new Error(missing.map(m => `${m[0]} is required!`).join('\n'));
-    }
+    
     
     await room.save();
 
